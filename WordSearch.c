@@ -12,7 +12,7 @@ typedef struct{
 }valor;
 
 void *busca(void *tmp){
-	sleep(1);
+	sleep(2);
 	tmp = (valor*)tmp;
 	valor *t = (valor*) tmp;
 	char direita[10], esquerda[10],cima[10],baixo[10];
@@ -46,16 +46,16 @@ void *busca(void *tmp){
 					}
 
 					if (d==tam){
-						printf("[%d]  [%d]---[%d] [%d]  %s\n",i,j,i,j+d,direita);
+						printf("[%d]  [%d]---[%d] [%d]  %s\n",i,j,i,j+d-1,direita);
 					}
 					if (e==tam){
-						printf("[%d]  [%d]---[%d] [%d]  %s\n",i,j,i,j-e,esquerda);
+						printf("[%d]  [%d]---[%d] [%d]  %s\n",i,j,i,j-e-1,esquerda);
 					}
 					if (b==tam){
-						printf("[%d]  [%d]---[%d] [%d]  %s\n",i,j,i+b,j,baixo);
+						printf("[%d]  [%d]---[%d] [%d]  %s\n",i,j,i+b-1,j,baixo);
 					}
 					if (c==tam){
-						printf("[%d]  [%d]---[%d] [%d]  %s\n",i,j,i-c,j,cima);
+						printf("[%d]  [%d]---[%d] [%d]  %s\n",i,j,i-c-1,j,cima);
 					}
 				}
 				d=0;
